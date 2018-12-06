@@ -168,8 +168,8 @@ export default class AppIntroSlider extends React.Component {
       : this._renderNextButton();
 
     return (
-      <View style={styles.paginationContainer}>
-        <View style={styles.paginationDots}>
+      <View style={[styles.paginationContainer, this.props.paginationContainerStyle]}>
+        <View style={[styles.paginationDots, this.props.paginationDotsStyle]}>
           {!this.props.bottomButton && skipBtn}
           {this.props.slides.length > 1 &&
             this.props.slides.map((_, i) => (
